@@ -1,20 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="vertical-center">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card class="background">
+      <ion-img src="https://img.freepik.com/vector-gratis/logotipo-restaurante_23-2148558726.jpg?size=626&ext=jpg"></ion-img>
+      <ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+          <ion-card-title style="text-align: center;">Ingrese sus Datos</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-input placeholder="Email" [(ngModel)]="user.email" style="text-align: center;"></ion-input>
+          <ion-input placeholder="Contraseña" type="password" [(ngModel)]="user.password" style="text-align: center;"></ion-input>
+          <ion-button shape="round" color="primary" (click)="login()" expand="full">Ingresar</ion-button>
+      </ion-card-content>
+  </ion-card>
 </ion-content>
